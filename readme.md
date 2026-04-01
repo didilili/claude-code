@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Claude Code 运行截图](./images/main.jpg)
+![Claude Code 运行截图](docs/images/main.jpg)
 
 **🔍 深入理解 AI 编程工具的完整客户端实现**
 
@@ -29,13 +29,20 @@
 
 ## 📚 文档导航
 
-| 文档                                             | 适合谁         | 内容                           |
-| ------------------------------------------------ | -------------- | ------------------------------ |
-| [RUNNING_SETUP.md](./RUNNING_SETUP.md)           | 想把项目跑起来 | 依赖补齐、兼容修复、启动方式   |
-| [SOURCE_STUDY_GUIDE.md](./SOURCE_STUDY_GUIDE.md) | 想系统学习源码 | 架构总览、核心子系统、阅读路径 |
-| [LEARNING_PATH.md](./LEARNING_PATH.md)           | 想要学习路线图 | 入门/进阶/专题路径、检查清单   |
-| [EVENT_STORY.md](./EVENT_STORY.md)               | 想了解事件背景 | 时间线、传播过程、社区讨论     |
-| [FAQ.md](./FAQ.md)                               | 遇到问题       | 常见问题解答                   |
+| 文档                                                              | 适合谁             | 内容                                   |
+| ----------------------------------------------------------------- | ------------------ | -------------------------------------- |
+| [RUNNING_SETUP.md](docs/RUNNING_SETUP.md)                         | 想把项目跑起来     | 依赖补齐、兼容修复、启动方式           |
+| [SOURCE_STUDY_GUIDE.md](docs/SOURCE_STUDY_GUIDE.md)               | 想系统学习源码     | 架构总览、核心子系统、阅读路径         |
+| [ARCHITECTURE_DEEP_DIVE.md](docs/ARCHITECTURE_DEEP_DIVE.md)       | 想深入理解架构     | 核心架构、启动流程、工具系统、权限安全 |
+| [PROMPTS_ANALYSIS.md](docs/PROMPTS_ANALYSIS.md)                   | 想学习 Prompt 工程 | 系统 Prompt、工具 Prompt、安全规则     |
+| [TOOLS_SYSTEM_GUIDE.md](docs/TOOLS_SYSTEM_GUIDE.md)               | 想了解工具实现     | 54 个工具详解、设计模式、使用场景      |
+| [KEY_FEATURES_ANALYSIS.md](docs/KEY_FEATURES_ANALYSIS.md)         | 想了解核心特性     | 8 大功能、26 个隐藏指令、技术债务分析  |
+| [ADVANCED_ANALYSIS.md](docs/ADVANCED_ANALYSIS.md)                 | 想学习高级技巧     | Prompt 工程、自修复机制、隐藏功能      |
+| [PLAN_MODE_AGENT_GUIDE.md](docs/PLAN_MODE_AGENT_GUIDE.md)         | 想了解计划模式     | 计划模式详解、Agent 系统、工具限制     |
+| [PERMISSION_SECURITY_GUIDE.md](docs/PERMISSION_SECURITY_GUIDE.md) | 想了解权限系统     | 权限决策、分类器、策略限制             |
+| [LEARNING_PATH.md](docs/LEARNING_PATH.md)                         | 想要学习路线图     | 入门/进阶/专题路径、检查清单           |
+| [EVENT_STORY.md](docs/EVENT_STORY.md)                             | 想了解事件背景     | 时间线、传播过程、社区讨论             |
+| [FAQ.md](docs/FAQ.md)                                             | 遇到问题           | 常见问题解答                           |
 
 ---
 
@@ -78,14 +85,14 @@
 
 ### 路径 1：快速上手（10 分钟）
 
-1. 阅读本页"快速事实"了解项目规模
-2. 跳转 [RUNNING_SETUP.md](./RUNNING_SETUP.md) 查看三行命令启动
+1. 阅读本页「快速事实」了解项目规模
+2. 跳转 [RUNNING_SETUP.md](docs/RUNNING_SETUP.md) 查看三行命令启动
 3. 运行 `bun run start` 体验交互界面
 
 ### 路径 2：深入学习（系统性）
 
-1. 阅读 [EVENT_STORY.md](./EVENT_STORY.md) 了解事件背景
-2. 阅读 [SOURCE_STUDY_GUIDE.md](./SOURCE_STUDY_GUIDE.md) 理解架构
+1. 阅读 [EVENT_STORY.md](docs/EVENT_STORY.md) 了解事件背景
+2. 阅读 [SOURCE_STUDY_GUIDE.md](docs/SOURCE_STUDY_GUIDE.md) 理解架构
 3. 选择一条学习路径深入源码
 
 ---
@@ -118,13 +125,13 @@
 ### 三行命令启动
 
 ```bash
-git https://github.com/didilili/claude-code
+git clone https://github.com/didilili/claude-code
 cd claude-code
 bun install
 bun run start
 ```
 
-> 💡 首次启动会显示工作区信任确认，详细说明见 [RUNNING_SETUP.md](./RUNNING_SETUP.md)
+> 💡 首次启动会显示工作区信任确认，详细说明见 [RUNNING_SETUP.md](docs/RUNNING_SETUP.md)
 
 ### 其他常用命令
 
@@ -144,13 +151,13 @@ bun run format
 **第一次接触？** 建议顺序：
 
 1. 阅读本页了解项目边界
-2. 选择”快速上手”或”深入学习”路径
-3. 查看 [EVENT_STORY.md](./EVENT_STORY.md) 了解事件背景（可选）
+2. 选择「快速上手」或「深入学习」路径
+3. 查看 [EVENT_STORY.md](docs/EVENT_STORY.md) 了解事件背景（可选）
 
 **有使用经验？** 直接跳转：
 
-- 运行细节 → [RUNNING_SETUP.md](./RUNNING_SETUP.md)
-- 源码结构 → [SOURCE_STUDY_GUIDE.md](./SOURCE_STUDY_GUIDE.md)
+- 运行细节 → [RUNNING_SETUP.md](docs/RUNNING_SETUP.md)
+- 源码结构 → [SOURCE_STUDY_GUIDE.md](docs/SOURCE_STUDY_GUIDE.md)
 
 ## 🛠️ 技术栈
 
@@ -187,17 +194,17 @@ bun run format
 
 与其他社区仓库相比，本仓库的独特价值：
 
-| 特点         | 本仓库                      | 其他仓库       |
-| ------------ | --------------------------- | -------------- |
-| **中文文档** | ✅ 完整的中文学习指南       | 多为英文       |
-| **可运行性** | ✅ 已补齐依赖，可直接启动   | 部分仅展示源码 |
-| **文档结构** | ✅ 分层清晰：运行/学习/事件 | 单一 README    |
-| **学习路径** | ✅ 提供多条阅读路径         | 较少学习指导   |
-| **事件背景** | ✅ 详细的事件时间线         | 较少背景说明   |
+| 特点         | 本仓库                                 | 其他仓库       |
+| ------------ | -------------------------------------- | -------------- |
+| **中文文档** | ✅ 完整的中文学习指南                  | 多为英文       |
+| **可运行性** | ✅ 已补齐依赖，可直接启动              | 部分仅展示源码 |
+| **文档结构** | ✅ 首页为根目录 README，专题在 `docs/` | 单一 README    |
+| **学习路径** | ✅ 提供多条阅读路径                    | 较少学习指导   |
+| **事件背景** | ✅ 详细的事件时间线                    | 较少背景说明   |
 
 ## 📋 免责声明
 
-本仓库中的代码、命名、提示词、实现细节及相关知识产权归其原始权利人所有。此镜像仓库及 README 仅用于：
+本仓库中的代码、命名、提示词、实现细节及相关知识产权归其原始权利人所有。此镜像仓库及文档（根目录 `README.md`、`docs/` 下 Markdown）仅用于：
 
 - 研究
 - 文档整理

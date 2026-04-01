@@ -1,6 +1,6 @@
 # 常见问题（FAQ）
 
-[返回 README](./readme.md)
+[返回 README](../README.md)
 
 ---
 

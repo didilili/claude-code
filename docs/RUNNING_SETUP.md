@@ -1,6 +1,6 @@
 # Claude Codes 恢复与运行说明
 
-[返回 README](./readme.md) | [源码学习指南](./SOURCE_STUDY_GUIDE.md) | [事件始末说明](./EVENT_STORY.md) | [FAQ](./FAQ.md)
+[返回 README](../README.md) | [源码学习指南](./SOURCE_STUDY_GUIDE.md) | [事件始末说明](./EVENT_STORY.md) | [FAQ](./FAQ.md)
 
 ---
 
@@ -13,11 +13,12 @@
 curl -fsSL https://bun.sh/install | bash
 exec $SHELL
 
-# 2. 安装依赖
-cd /Users/tools/Music/cc/claude-codes
+# 2. 进入仓库，在与 package.json 同级目录安装依赖
+#    （本仓库的 package.json 当前在 docs/ 下时请：cd docs）
+cd /path/to/claude-codes
 bun install
 
-# 3. 启动
+# 3. 启动（仍在上述目录）
 bun run start
 ```
 
@@ -65,9 +66,9 @@ bun run start
 为了把这个仓库从”源码镜像”补成”可运行工作区”，我新增或补齐了下面这些内容：
 
 ### 核心配置文件
-- `package.json` - 依赖列表和运行脚本
-- `bun.lock` - 固定依赖解析结果
-- `tsconfig.json` - TypeScript 编译配置
+- `docs/package.json` - 依赖列表和运行脚本（当前位于 `docs/`）
+- `docs/bun.lock` - 固定依赖解析结果
+- `tsconfig.json` - TypeScript 编译配置（仓库根目录）
 
 ### 格式化和编辑器配置
 - `.prettierrc.json` - Prettier 格式化规则
@@ -85,7 +86,7 @@ bun run start
 - `shims/url-handler-napi/` - URL 处理 NAPI 模块
 
 ### 运行时依赖
-- `image-processor.node` - 图像处理本地二进制模块
+- `docs/image-processor.node` - 图像处理本地二进制模块（当前与 `docs/package.json` 同区）
 
 ### 开发入口
 - `src/dev-entry.ts` - 适合恢复版源码的开发入口
@@ -98,21 +99,21 @@ bun run start
 - `src/ink/global.ts` - 修复 Ink 全局模块导入
 - 以及其他约 50+ 个缺失的 TypeScript 文件
 
-### 文档文件
-- `readme.md` - 项目主页
-- `RUNNING_SETUP.md` - 本文档
-- `SOURCE_STUDY_GUIDE.md` - 源码学习指南
-- `EVENT_STORY.md` - 事件始末
-- `FAQ.md` - 常见问题
-- `CONTRIBUTING.md` - 贡献指南
-- `LEARNING_PATH.md` - 学习路线图
+### 文档文件（均在 `docs/` 目录）
+- `README.md`（仓库根目录）- 项目主页与文档导航
+- `docs/RUNNING_SETUP.md` - 本文档
+- `docs/SOURCE_STUDY_GUIDE.md` - 源码学习指南
+- `docs/EVENT_STORY.md` - 事件始末
+- `docs/FAQ.md` - 常见问题
+- `docs/LEARNING_PATH.md` - 学习路线图
+- （可选）其他深度文档：`docs/ARCHITECTURE_DEEP_DIVE.md`、`docs/PROMPTS_ANALYSIS.md` 等
 
 这些内容的作用分别是：
 
 ### 核心配置文件
-- `package.json` - 提供依赖列表和运行脚本，定义项目元信息
-- `bun.lock` - 固定依赖解析结果，减少不同机器之间的安装漂移
-- `tsconfig.json` - 让 TypeScript/Bun 能按恢复源码的结构正确解析模块
+- `docs/package.json` - 提供依赖列表和运行脚本，定义项目元信息
+- `docs/bun.lock` - 固定依赖解析结果，减少不同机器之间的安装漂移
+- `tsconfig.json`（根目录）- 让 TypeScript/Bun 能按恢复源码的结构正确解析模块
 
 ### 格式化和编辑器配置
 - `.prettierrc.json` - 统一代码格式化规则（单引号、不加分号、2 空格等）
@@ -126,7 +127,7 @@ bun run start
 - 每个 shim 包都包含 `package.json` 和基础实现文件
 
 ### 运行时依赖
-- `image-processor.node` - 运行时需要的本地二进制模块（图像处理）
+- `docs/image-processor.node` - 运行时需要的本地二进制模块（图像处理）
 - 这是一个占位文件，实际功能可能需要真实的二进制模块
 
 ### 开发入口
@@ -148,9 +149,9 @@ bun run start
 - 推荐系统：macOS / Linux
 - Node.js 可保留，但主运行入口不是 Node，而是 Bun
 
-### README 中已精简的运行说明
+### 根目录 README 与 `docs/` 的分工
 
-为了让主 README 更短，现在首页只保留最小启动方式：
+完整项目说明与文档导航在仓库根目录 **[README.md](../README.md)**；运行细节、源码学习、事件背景等专题在 **`docs/`** 下各 Markdown 文件。
 
 ```bash
 cd /Users/tools/Music/cc/claude-codes
@@ -568,8 +569,8 @@ ANTHROPIC_API_KEY=your_key_here bun run start --bare --print "hello"
 
 如果你要继续追踪这些恢复工作，最值得先看的就是这些文件：
 
-- `readme.md`
-- `package.json`
+- `README.md`（根目录）
+- `docs/package.json`
 - `.prettierrc.json`
 - `.prettierignore`
 - `.editorconfig`

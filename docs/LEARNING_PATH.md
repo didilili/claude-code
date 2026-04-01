@@ -1,6 +1,6 @@
 # Claude Code 学习路线图
 
-[返回 README](./readme.md)
+[返回 README](../README.md)
 
 ---
 
@@ -26,7 +26,7 @@
 
 **上午（2 小时）**
 
-1. ✅ 阅读 [readme.md](./readme.md) 了解项目定位
+1. ✅ 阅读根目录 [README.md](../README.md) 了解项目定位
 2. ✅ 阅读 [EVENT_STORY.md](./EVENT_STORY.md) 了解背景
 3. ✅ 安装 Bun 和依赖
 

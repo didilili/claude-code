@@ -1,6 +1,6 @@
 # Claude Code 源码学习指南
 
-[返回 README](./readme.md) | [恢复与运行说明](./RUNNING_SETUP.md) | [事件始末说明](./EVENT_STORY.md) | [学习路线图](./LEARNING_PATH.md)
+[返回 README](../README.md) | [恢复与运行说明](./RUNNING_SETUP.md) | [事件始末说明](./EVENT_STORY.md) | [学习路线图](./LEARNING_PATH.md)
 
 ---
 
@@ -24,7 +24,7 @@
 
 ## 📖 关于本文档
 
-这份文档专门服务于”如何系统学习这份源码”，把主 README 里的源码学习部分独立出来，避免主页过长。
+这份文档专门服务于「如何系统学习这份源码」，把根目录 `README.md` 里的源码学习部分独立出来，避免首页过长。
 
 它的目标不是替你做源码分析结论，而是帮你更快建立阅读顺序、结构感和重点入口。
 
@@ -343,7 +343,7 @@ find src -maxdepth 1 -type d | sort
 
 如果你面对的是中文读者，一个比较稳妥的做法就是像当前仓库这样分层：
 
-- `README` 负责首页导航和最小事实
-- `RUNNING_SETUP.md` 负责工程恢复与运行
-- `SOURCE_STUDY_GUIDE.md` 负责源码学习
-- `EVENT_STORY.md` 负责事件背景
+- `README.md`（根目录）：完整首页导航、快速开始与文档索引
+- `docs/RUNNING_SETUP.md`：工程恢复与运行
+- `docs/SOURCE_STUDY_GUIDE.md`：源码学习（本文档）
+- `docs/EVENT_STORY.md`：事件背景

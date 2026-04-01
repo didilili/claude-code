@@ -1,6 +1,6 @@
 # Claude Code 事件始末
 
-[返回 README](./readme.md) | [恢复与运行说明](./RUNNING_SETUP.md) | [源码学习指南](./SOURCE_STUDY_GUIDE.md)
+[返回 README](../README.md) | [恢复与运行说明](./RUNNING_SETUP.md) | [源码学习指南](./SOURCE_STUDY_GUIDE.md)
 
 ---
 
